@@ -15,15 +15,15 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: campus-service
-          uri: lb://campus-service
+        - id: campusModule
+          uri: lb://CAMPUS-SERVICE
           predicates:
-          - Path=/campus-service/**
+          - Path=/campus/**
         - id: employee-service
           uri: lb://employee-service
           predicates:
-          - Path=/employee-service/**
+          - Path=/employee/**
         - id: search-service
           uri: lb://search-service
           predicates:
-          - Path=/search-service/**
+          - Path=/search/**
