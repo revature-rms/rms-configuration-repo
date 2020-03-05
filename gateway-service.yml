@@ -16,9 +16,9 @@ spring:
     gateway:
       routes:
         - id: campusModule
-          uri: http://localhost:8080
+          uri: lb://campus
           predicates:
-          - Path=/campus/**
+          - Path=//campus/**
         - id: employee-service
           uri: lb://employee-service
           predicates:
