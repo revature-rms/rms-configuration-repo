@@ -10,15 +10,13 @@ eureka:
     register-with-eureka: false
 
 spring:
-  application:
-    name: gateway-service
   cloud:
     gateway:
       routes:
         - id: campus-service
-          uri: lb://campus
+          uri: http://localhost:10001
           predicates:
-          - Path=//campus/**
+          - Path=/campus/**
         - id: employee-service
           uri: lb://employee-service
           predicates:
