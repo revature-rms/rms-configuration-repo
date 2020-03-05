@@ -12,9 +12,12 @@ eureka:
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: campus-service
-          uri: http://localhost:10001
+          uri: lb://campus-service
           predicates:
           - Path=/campus/**
         - id: employee-service
