@@ -9,24 +9,24 @@ eureka:
     fetch-registry: true
     register-with-eureka: false
 
-spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-      - id: campus-service
-        uri: lb://CAMPUS-SERVICE
-        predicates:
-        - Path=/campus/**
-        filters:
-        - RewritePath=/campus/(?<path>.*), /$\{path}
-      - id: employee-service
-        uri: lb://employee-service
-        predicates:
-        - Path=/employee/**
-      - id: search-service
-        uri: lb://search-service
-        predicates:
-        - Path=/search/**
+# spring:
+#   cloud:
+#     gateway:
+#       discovery:
+#         locator:
+#           enabled: true
+#       routes:
+#       - id: campus-service
+#         uri: lb://CAMPUS-SERVICE
+#         predicates:
+#         - Path=/campus/**
+#         filters:
+#         - RewritePath=/campus/(?<path>.*), /$\{path}
+#       - id: employee-service
+#         uri: lb://employee-service
+#         predicates:
+#         - Path=/employee/**
+#       - id: search-service
+#         uri: lb://search-service
+#         predicates:
+#         - Path=/search/**
