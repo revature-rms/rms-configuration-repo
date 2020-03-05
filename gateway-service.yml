@@ -15,7 +15,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: campusModule
+        - id: campus-service
           uri: lb://campus
           predicates:
           - Path=//campus/**
