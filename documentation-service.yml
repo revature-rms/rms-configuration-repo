@@ -12,4 +12,6 @@ zuul:
     campus:
       path: /campus/**
       serviceId: campus-service
-    
+    employee:
+      path: /employee/**
+      serviceId: employee-service
