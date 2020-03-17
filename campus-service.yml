@@ -10,4 +10,4 @@ eureka:
     register-with-eureka: true
 
 springdoc:
-  packagesToScan: com.revature.rms.campus
+  packagesToScan: com.revature.rms.campus 
