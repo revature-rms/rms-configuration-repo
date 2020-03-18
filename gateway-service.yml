@@ -27,13 +27,13 @@ spring:
         predicates:
         - Path=/employee/**
         filters:
-        - RewritePath=/campus/(?<path>.*), /$\{path}
+        - RewritePath=/employee/(?<path>.*), /$\{path}
       - id: search-service
         uri: lb://search-service
         predicates:
         - Path=/search/**
         filters:
-        - RewritePath=/campus/(?<path>.*), /$\{path}
+        - RewritePath=/search/(?<path>.*), /$\{path}
       - id: documentation-service
         uri: http://localhost:${server.port}
         predicates:
