@@ -19,19 +19,19 @@ spring:
       - id: campus-service
         uri: lb://campus-service
         predicates:
-        - Path=/campus-service/**
+        - Path=/campussrvc/**
         filters:
         - RewritePath=/campus/(?<path>.*), /$\{path}
       - id: employee-service
         uri: lb://employee-service
         predicates:
-        - Path=/employee-service/**
+        - Path=/employeesrvc/**
         filters:
         - RewritePath=/campus/(?<path>.*), /$\{path}
       - id: search-service
         uri: lb://search-service
         predicates:
-        - Path=/search-service/**
+        - Path=/searchsrvc/**
         filters:
         - RewritePath=/campus/(?<path>.*), /$\{path}
       - id: documentation-service
