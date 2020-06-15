@@ -28,6 +28,12 @@ spring:
         - Path=/employee/**
         filters:
         - RewritePath=/employee/(?<path>.*), /$\{path}
+      - id: auth-service
+        uri: lb://auth-service
+        predicates:
+        - Path=/auth/**
+        filters:
+        - RewritePath=/auth/(?<path>.*), /$\{path}
       - id: search-service
         uri: lb://search-service
         predicates:
