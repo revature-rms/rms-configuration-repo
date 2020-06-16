@@ -16,11 +16,9 @@ spring:
         locator:
           enabled: true
       globalcors:
-        cors-configurations:
+        corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedHeaders:
-              - content-type
             allowedMethods:
               - GET
               - POST
