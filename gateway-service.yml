@@ -20,13 +20,13 @@ spring:
           '[/**]':
             allowed-origins: "*"
             allowed-headers:
-              - content-type
+            - content-type
             allowed-methods:
-              - GET
-              - POST
-              - PUT
-              - PATCH
-              - DELETE
+            - GET
+            - POST
+            - PUT
+            - PATCH
+            - DELETE
       routes:
       - id: campus-service
         uri: lb://campus-service
