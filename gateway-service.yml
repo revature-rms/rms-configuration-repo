@@ -12,8 +12,6 @@ eureka:
 spring:
   cloud:
     gateway:
-      locator:
-        enabled: true
       discovery:
         locator:
           enabled: true
@@ -26,6 +24,8 @@ spring:
               - "*"
             allowed-methods:
               - "*"
+            registerCorsConfiguration:
+              - "/**"
       routes:
       - id: campus-service
         uri: lb://campus-service
