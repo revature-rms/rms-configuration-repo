@@ -21,7 +21,7 @@ spring:
             allowed-origins:
               - "*"
             allowed-headers:
-              - Content-Type, text/plain
+              - "*"
             allowed-methods:
               - "*"
       routes:
