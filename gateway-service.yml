@@ -16,12 +16,12 @@ spring:
         locator:
           enabled: true
       globalcors:
-        corsConfigurations:
+        cors-configurations:
           '[/**]':
             allowed-origins:
-              - "*"
+              - "http://ec2co-ecsel-1kkd7h5x8iddx-1154184150.us-east-1.elb.amazonaws.com:8888/*"
             allowed-headers:
-              - "*"
+              - "**"
             allowed-methods:
               - "*"
       routes:
