@@ -18,15 +18,12 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowed-origins: "*"
+            allowed-origins:
+              - "*"
             allowed-headers:
-              - content-type
+              - Content-Type, text/plain
             allowed-methods:
-              - GET
-              - POST
-              - PUT
-              - PATCH
-              - DELETE
+              - "*"
       routes:
       - id: campus-service
         uri: lb://campus-service
