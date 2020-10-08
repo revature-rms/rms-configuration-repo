@@ -15,12 +15,12 @@ spring:
       discovery:
         locator:
           enabled: true
-    globalcors:
-      corsConfigurations:
-        '[/**]':
-          allowedOrigins: "*"
-          allowedMethods:
-            - GET
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
       routes:
       - id: campus-service
         uri: lb://campus-service
