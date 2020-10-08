@@ -45,8 +45,6 @@ spring:
           '[/**]':
             allowed-origins:
               - "*"
-            allowed-headers:
-              - content-type
             allowed-methods:
               - GET
               - POST
