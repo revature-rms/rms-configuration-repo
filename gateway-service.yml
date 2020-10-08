@@ -42,7 +42,7 @@ spring:
             - RewritePath=/search/(?<path>.*), /$\{path}
       globalcors:
         cors-configuration:
-          '[/**]':
+          '/**':
             allowed-origins:
               - "*"
             allowed-methods:
