@@ -18,23 +18,26 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowed-origins:
-              - "*"
+            allowed-origins: "*"
             allowed-headers:
-              - "*"
+              - content-type
             allowed-methods:
-              - "*"
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
       routes:
       - id: campus-service
         uri: lb://campus-service
         predicates:
-        - Path=/campus/**
+        - Path=/campuses/**
         filters:
         - RewritePath=/campus/(?<path>.*), /$\{path}
       - id: employee-service
         uri: lb://employee-service
         predicates:
-        - Path=/employee/**
+        - Path=/employees/**
         filters:
         - RewritePath=/employee/(?<path>.*), /$\{path}
       - id: auth-service
