@@ -22,12 +22,9 @@ spring:
               - "*"
             allowed-headers:
               - "*"
-#            allowed-methods:
-#              - GET
-#              - POST
-#              - PUT
-#              - PATCH
-#              - DELETE
+            allowed-methods:
+              - "*"
+            allow-credentials: true
       routes:
       - id: campus-service
         uri: lb://campus-service
