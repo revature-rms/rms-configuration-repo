@@ -20,7 +20,7 @@ spring:
           '[/**]':
             allowedOrigins: "*"
             allowedMethods:
-              - GET
+              - "*"
       routes:
       - id: campus-service
         uri: lb://campus-service
