@@ -22,27 +22,27 @@ spring:
 #            allowedMethods:
 #              - "*"
       routes:
-      - id: campus-service
-        uri: lb://campus-service
-        predicates:
-        - Path=/campuses/**
-        filters:
-        - RewritePath=/campus/(?<path>.*), /$\{path}
-      - id: employee-service
-        uri: lb://employee-service
-        predicates:
-        - Path=/employees/**
-        filters:
-        - RewritePath=/employee/(?<path>.*), /$\{path}
-      - id: auth-service
-        uri: lb://auth-service
-        predicates:
-        - Path=/auth/**
-        filters:
-        - RewritePath=/auth/(?<path>.*), /$\{path}
-      - id: search-service
-        uri: lb://search-service
-        predicates:
-        - Path=/search/**
-        filters:
-        - RewritePath=/search/(?<path>.*), /$\{path}
+        - id: campus-service
+          uri: lb://campus-service
+          predicates:
+            - Path=/campuses/**
+          filters:
+            - RewritePath=/campus/(?<path>.*), /$\{path}
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/employees/**
+          filters:
+            - RewritePath=/employee/(?<path>.*), /$\{path}
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - RewritePath=/auth/(?<path>.*), /$\{path}
+        - id: search-service
+          uri: lb://search-service
+          predicates:
+            - Path=/search/**
+          filters:
+            - RewritePath=/search/(?<path>.*), /$\{path}
