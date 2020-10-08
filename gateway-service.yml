@@ -22,7 +22,7 @@ spring:
 #            allowed-headers:
 #              - Content-Type
             allowed-methods:
-              - GET
+              - "GET"
 #              - POST
 #              - PUT
 #              - PATCH
