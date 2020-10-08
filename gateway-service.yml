@@ -18,11 +18,12 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowed-origins: "*"
-#            allowed-headers:
-#              - Content-Type
+            allowed-origins:
+              - "*"
+            allowed-headers:
+              - "*"
 #            allowed-methods:
-#              - "GET"
+#              - GET
 #              - POST
 #              - PUT
 #              - PATCH
