@@ -16,17 +16,17 @@ spring:
         locator:
           enabled: true
       globalcors:
-        cors-configurations:
-          '[/**]':
-            allowed-origins: "*"
-            allowed-headers:
-              - content-type
-            allowed-methods:
-              - GET
-              - POST
-              - PUT
-              - PATCH
-              - DELETE
+#        cors-configurations:
+#          '[/**]':
+#            allowed-origins: "*"
+#            allowed-headers:
+#              - content-type
+#            allowed-methods:
+#              - GET
+#              - POST
+#              - PUT
+#              - PATCH
+#              - DELETE
       routes:
       - id: campus-service
         uri: lb://campus-service
