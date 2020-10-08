@@ -15,12 +15,6 @@ spring:
       discovery:
         locator:
           enabled: true
-#      globalcors:
-#        corsConfigurations:
-#          '[/**]':
-#            allowedOrigins: "*"
-#            allowedMethods:
-#              - "*"
       routes:
         - id: campus-service
           uri: lb://campus-service
@@ -46,3 +40,15 @@ spring:
             - Path=/search/**
           filters:
             - RewritePath=/search/(?<path>.*), /$\{path}
+      globalcors:
+        cors-configuration:
+          '[/**]':
+            allowed-origins: "*"
+            allowed-headers:
+              - content-type
+            allowed-methods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
