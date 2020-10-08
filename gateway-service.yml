@@ -21,7 +21,7 @@ spring:
             allowed-origins: "*"
 #            allowed-headers:
 #              - Content-Type
-            allowed-methods: "*"
+            allowed-methods: *
 #              - GET
 #              - POST
 #              - PUT
