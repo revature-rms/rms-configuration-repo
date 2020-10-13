@@ -1,10 +1,24 @@
 server:
   port: 10006
 
+spring:
+  datasource:
+    url: jdbc:h2:mem:authservice
+    driver-class-name: org.h2.Driver
+    username: admin
+    password: password
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
 eureka:
   client:
     enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://{SERVICE_DISCO_URL}:{SERVICE_DISCO_PORT}/eureka
     fetch-registry: false
     register-with-eureka: true
