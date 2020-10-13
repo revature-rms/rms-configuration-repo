@@ -19,6 +19,6 @@ eureka:
   client:
     enabled: true
     serviceUrl:
-      defaultZone: http://{SERVICE_DISCO_URL}:{SERVICE_DISCO_PORT}/eureka
+      defaultZone: http://${SERVICE_DISCO_URL}:${SERVICE_DISCO_PORT}/eureka
     fetch-registry: false
     register-with-eureka: true
