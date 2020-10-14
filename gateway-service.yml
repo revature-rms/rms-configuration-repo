@@ -8,6 +8,8 @@ eureka:
       defaultZone: http://${SERVICE_DISCO_URL:localhost}:${SERVICE_DISCO_PORT:8761}/eureka
     fetch-registry: true
     register-with-eureka: true
+  instance:
+    prefer-ip-address: true
 
 spring:
   cloud:
