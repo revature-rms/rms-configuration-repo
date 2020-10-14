@@ -8,3 +8,9 @@ eureka:
       defaultZone: http://${SERVICE_DISCO_URL:localhost}:${SERVICE_DISCO_PORT:8761}/eureka
     fetch-registry: false
     register-with-eureka: true
+
+spring:
+  data:
+    mongodb:
+      repositories:
+        enabled: true
