@@ -10,6 +10,8 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: true
+  prefer-same-zone: false
+  should-use-dns: false
 
 spring:
   cloud:
