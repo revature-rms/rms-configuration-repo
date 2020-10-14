@@ -1,6 +1,13 @@
 server:
   port: 8080
 
+  eureka.instance.non-secure-port=${EXPOSED_PORT}
+  eureka.instance.preferIpAddress=true
+  eureka.instance.ip-address=${HOST_IP}
+  eureka.instance.hostname=${HOST_NAME}
+  eureka.instance.metadataMap.management.port=${EXPOSED_PORT}
+  eureka.instance.health-check-url=${HOST_IP}:${EXPOSED_PORT}/actuator/health
+
 eureka:
   client:
     enabled: true
@@ -8,6 +15,10 @@ eureka:
       defaultZone: http://${SERVICE_DISCO_URL:localhost}:${SERVICE_DISCO_PORT:8761}/eureka
     fetch-registry: true
     register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    ip-address: ${server.address}
+
 
 spring:
   cloud:
