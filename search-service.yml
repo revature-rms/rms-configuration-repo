@@ -10,6 +10,9 @@ eureka:
     register-with-eureka: true
 
 spring:
+  mongodb:
+    embedded:
+      version: 2.2.0
   data:
     mongodb:
       repositories:
