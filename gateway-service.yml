@@ -10,8 +10,6 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: true
-    ip-address: ${FARGATE_IP}
-    non-secure-port: 8080
 
 
 spring:
