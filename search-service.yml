@@ -6,7 +6,7 @@ eureka:
     enabled: true
     serviceUrl:
       defaultZone: http://${SERVICE_DISCO_URL:localhost}:${SERVICE_DISCO_PORT:8761}/eureka
-    fetch-registry: false
+    fetch-registry: true
     register-with-eureka: true
 
 spring:
